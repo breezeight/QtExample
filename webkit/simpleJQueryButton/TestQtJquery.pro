@@ -11,9 +11,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    mywebview.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    mywebview.h
 
 FORMS    += mainwindow.ui
 

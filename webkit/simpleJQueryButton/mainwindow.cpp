@@ -2,16 +2,22 @@
 #include "ui_mainwindow.h"
 #include <QWebView>
 #include <QDebug>
+#include <QKeyEvent>
+#include "mywebview.h"
+
+MyWebView *view;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
-    ui->webView->page()->setLinkDelegationPolicy( QWebPage::DelegateExternalLinks );
-    QWebView v;
-    //ui->webView->load(QUrl("C:/TestQtJquery/bris.html"));
-    ui->webView->load(QUrl("qrc:/bris.html"));
+    //ui->setupUi(this);
+    view = new MyWebView();
+
+    view->page()->setLinkDelegationPolicy( QWebPage::DelegateExternalLinks );
+    view = new MyWebView();
+    setCentralWidget(view);
+    view->load(QUrl("qrc:/bris.html"));
 }
 
 MainWindow::~MainWindow()
