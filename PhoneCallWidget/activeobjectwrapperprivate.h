@@ -2,11 +2,22 @@
 #define ACTIVEOBJECTWRAPPERPRIVATE_H
 
 #include "etel3rdparty.h"
+#include "e32base.h"
 
+class QString;
 class ActiveObjectWrapper;
 
 class ActiveObjectWrapperPrivate : public CActive
 {
+
+enum ePhoneCallStates
+{
+      ephoneCallIdle,
+      ephoneCallDialing,
+      ephoneCallHangingup,
+      ephoneCallAnswering
+};
+
 public:
     ActiveObjectWrapperPrivate(ActiveObjectWrapper *wrapper);
 
@@ -15,6 +26,8 @@ public:
     * Requests phone id.
     */
     void RequestManufacturer();
+
+    void DialTelephoneNumber(QString phoneNumber);
 
 private:
     /**
@@ -61,6 +74,8 @@ private:
     */
     CTelephony::TPhoneIdV1Pckg iPhoneIdV1Pckg;
 
+    CTelephony::TCallId iCallId;
+    ePhoneCallStates iState;
 
 };
 

@@ -35,8 +35,10 @@ signals: // New signals
 private:
     Ui::Widget *ui;
     ActiveObjectWrapper *m_wrapper;
+    QString m_telephoneNumber;
 
 private slots:
+    void on_pushButton_dial_clicked();
     void on_pushButton_clicked();
 };
 

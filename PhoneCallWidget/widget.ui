@@ -16,21 +16,44 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>50</x>
      <y>130</y>
-     <width>75</width>
-     <height>23</height>
+     <width>128</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Call</string>
+    <string>Display Manufacturer</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>280</y>
+     <x>207</x>
+     <y>135</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_dial">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>128</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dial !</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_dial">
+   <property name="geometry">
+    <rect>
+     <x>208</x>
+     <y>184</y>
      <width>113</width>
      <height>20</height>
     </rect>

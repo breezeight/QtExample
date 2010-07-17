@@ -20,7 +20,7 @@ public slots: // New slots
     * Requests manufacturer information.
     */
     void requestManufacturer();
-
+    void dialTelephoneNumber(QString phoneNumber);
 
 signals: // New signals
 
@@ -45,6 +45,7 @@ private: // Data
     * instantiated in constructor.
     */
     ActiveObjectWrapperPrivate *d_ptr;
+
 
 private: // Friend class definitions
 

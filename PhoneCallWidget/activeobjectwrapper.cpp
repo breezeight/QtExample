@@ -11,3 +11,11 @@ void ActiveObjectWrapper::requestManufacturer()
 {
     d_ptr->RequestManufacturer();
 }
+
+void ActiveObjectWrapper::dialTelephoneNumber(QString phoneNumber)
+{
+
+    d_ptr->DialTelephoneNumber(phoneNumber);
+}
+
+
