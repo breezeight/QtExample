@@ -47,3 +47,7 @@ void ActiveObjectWrapperPrivate::RunL()
         emit q_ptr->errorOccured(iStatus.Int());
     }
 }
+
+void ActiveObjectWrapperPrivate::DoCancel()
+{
+}

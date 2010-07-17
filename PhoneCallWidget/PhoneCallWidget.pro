@@ -37,5 +37,6 @@ symbian {
     LIBS += -LC:/NokiaQtSDK/Symbian/SDK_OK/epoc32/release/armv5/lib
     LIBS += -lcone \
     -leikcore \
-    -lavkon
+    -lavkon \
+    -letel3rdparty
 }
