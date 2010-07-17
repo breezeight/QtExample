@@ -2,6 +2,7 @@
 #define MYWEBVIEW_H
 
 #include <QWebView>
+#include <QWebElementCollection>
 #include <QKeyEvent>
 
 class MyWebView : public QWebView
@@ -17,8 +18,14 @@ signals:
 
 public slots:
 
+private slots:
+    void onLoadFinished();
 
-
+private:
+    int nextSpanY();
+    int prevSpanY();
+    QWebElementCollection m_allSpans;
+    int m_spanIndex;
 };
 
 #endif // MYWEBVIEW_H
